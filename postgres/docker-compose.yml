@@ -4,19 +4,15 @@ services:
 
   app_proxy:
     environment:
-      APP_HOST: postgres_postgres_server_1
+      APP_HOST: server
       APP_PORT: 5432
     
   server:
     image: postgres:latest
     environment:
-      - DB_TYPE=postgresdb
-      - DB_POSTGRESDB_HOST=192.168.0.47
-      - DB_POSTGRESDB_PORT=5432
-      - DB_POSTGRESDB_DATABASE=gilgamesh-n8n
-      - DB_POSTGRESDB_USER=benjamin.mizrany
-      - DB_POSTGRESDB_PASSWORD=ohgodiconfessimamess
+      - POSTGRES_PASSWORD=ohgodiconfessimamess
+      - POSTGRES_USER=benjamin.mizrany
+      - POSTGRES_DB=gilgamesh-n8n
     volumes:
       - ./data:/var/lib/postgresql/data
-    user: "1000:1000"
     init: true
