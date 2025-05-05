@@ -1,18 +1,14 @@
 version: "3.7"
 
 services:
-
-  app_proxy:
-    environment:
-      APP_HOST: server
-      APP_PORT: 5432
-    
   server:
     image: postgres:latest
     environment:
-      - POSTGRES_PASSWORD=ohgodiconfessimamess
-      - POSTGRES_USER=benjamin.mizrany
-      - POSTGRES_DB=gilgamesh-n8n
+      POSTGRES_PASSWORD: ohgodiconfessimamess
+      POSTGRES_USER: benjamin.mizrany
+      POSTGRES_DB: gilgamesh-n8n
     volumes:
       - ./data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
     init: true
