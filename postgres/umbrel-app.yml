@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: postgres
+name: postgres
+tagline: postgres service
+icon: https://www.postgresql.org/about/press/presskit16/base/
+category: Development
+version: "1.0.0"
+port: 5432
+description: >-
+  Postgres service so it works with n8n.
+
+developer: Umbrel
+website: https://umbrel.com
+submitter: Umbrel
+submission: https://github.com/Lenniott/gilgamesh_service
+repo: https://github.com/Lenniott/gilgamesh_service
+support: https://github.com/getumbrel/umbrel-hello-world-app/issues
+gallery:
+releaseNotes: >-
+  Add what's new in the latest version of your app here.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

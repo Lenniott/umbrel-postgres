@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      APP_HOST: postgres_postgres_server_1
+      APP_PORT: 5432
+    
+  server:
+    image: postgres:latest
+    user: "1000:1000"
+    init: true
